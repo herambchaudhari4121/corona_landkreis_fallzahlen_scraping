@@ -15,7 +15,7 @@ In addition, there is a crowdsource website on which current case numbers per co
 ## Want to participate? No problem!
 
 Search the website with press releases from your district (or neighboring districts) and try to find the following URLs:
- * Check, if we already collect the data and there is a district in landkreise/get-<mydistrict>.py!
+ * Check, if we have already collect the data and there is a district in landkreise/get-<mydistrict>.py!
  * If not: Where are the newest corona-case numbers for your district?
    * For which words do we have to search? (we also take RegEx :-) )
  * Is there a list (RSS-Feed?) of press releases including corona messages? (in case the URL is changing all the time?)
@@ -24,7 +24,7 @@ Search the website with press releases from your district (or neighboring distri
 ## How to start the included API service
 
 [See API README](api/README.md)
-Website where people can choose a district, enter the current number of cases (including status date) and source. (and a backend which forwards these requests with the possibility to access these data and include it in the data set.)
+Website has option where people can choose a district, enter the current number of cases (including status date) and source. (and a backend which forwards these requests with the possibility to access these data and include it in the data set.)
 
 ## How to use the web-crawler - scraper
 
@@ -42,7 +42,7 @@ Newer abstracted scraper (depend on scrape.py):
 SCRAPER_DEBUG=yes python3 landkreise/get-aachen.py
 ``` 
 
-The result data is saved in `landkreise/data/` as CSV files.
+The result data is saved in the `landkreise/data/` as CSV files.
 Each CSV file is named by it's official Id.
 The `districtId` and `communitId` Ids can be looked up in [sources.csv](https://github.com/corona-zahlen-landkreis/corona_landkreis_fallzahlen_scraping/blob/895afda1da29f1f00c2845617effdcd0011a469a/sources.csv) OR in JSON [location.json](api/db/raw-data/locations.json) (Replacement for sources.csv in master). The district/community unique Ids are the official identifier from https://de.wikipedia.org/wiki/Amtlicher_Gemeindeschl%C3%BCssel.
 
@@ -71,7 +71,7 @@ Debian/Ubuntu packages:
   sudo apt-get install python3 python3-bs4 python3-cachecontrol python3-lockfile python3-tqdm
 ```
 
-  * Makefile for Docker container also exists
+  * Make a file for Docker container also exists
 
 ### Writing / Mainting a scraper
 
